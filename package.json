@@ -1,9 +1,11 @@
 {
   "name": "@riim/self-closing-tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/selfClosingTags.js",
+  "typings": "dist/selfClosingTags.d.ts",
   "scripts": {
+    "build": "rm -rf ./dist && ./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Riim/self-closing-tags/issues"
   },
-  "homepage": "https://github.com/Riim/self-closing-tags#readme"
+  "homepage": "https://github.com/Riim/self-closing-tags#readme",
+  "devDependencies": {
+    "typescript": "^2.3.3"
+  }
 }

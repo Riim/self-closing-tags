@@ -1,4 +1,4 @@
-var list = exports.list = [
+export let list = [
 	'area',
 	'base',
 	'basefont',
@@ -31,9 +31,7 @@ var list = exports.list = [
 	'use'
 ];
 
-exports.map = list.reduce(function(map, name) {
+export let map = list.reduce(function(map, name) {
 	map[name] = true;
 	return map;
-}, Object.create(null));
-
-exports.default = exports;
+}, Object.create(null)) as { [name: string]: true };
