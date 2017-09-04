@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var map_set_polyfill_1 = require("@riim/map-set-polyfill");
 exports.list = [
     'area',
     'base',
@@ -31,7 +32,4 @@ exports.list = [
     'stop',
     'use'
 ];
-exports.map = exports.list.reduce(function (map, name) {
-    map[name] = true;
-    return map;
-}, Object.create(null));
+exports.map = exports.list.reduce(function (map, name) { return map.set(name, true); }, new map_set_polyfill_1.Map());

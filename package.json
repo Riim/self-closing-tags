@@ -1,11 +1,11 @@
 {
   "name": "@riim/self-closing-tags",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "dist/selfClosingTags.js",
-  "typings": "dist/selfClosingTags.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf ./dist && ./node_modules/.bin/tsc",
+    "build": "rm -rf dist && node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Riim/self-closing-tags#readme",
   "devDependencies": {
-    "typescript": "^2.3.3"
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@riim/map-set-polyfill": "^1.0.0"
   }
 }

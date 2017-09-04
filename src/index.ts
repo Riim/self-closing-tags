@@ -1,3 +1,5 @@
+import { Map } from '@riim/map-set-polyfill';
+
 export let list = [
 	'area',
 	'base',
@@ -31,7 +33,4 @@ export let list = [
 	'use'
 ];
 
-export let map = list.reduce(function(map, name) {
-	map[name] = true;
-	return map;
-}, Object.create(null)) as { [name: string]: true };
+export let map = list.reduce((map, name) => map.set(name, true), new Map<string, true>());
